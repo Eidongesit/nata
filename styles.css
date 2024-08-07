@@ -685,13 +685,14 @@ transform-style: preserve-3d;
 .modal{
   position: fixed;
   top: 0;
-  left: 50%;
+  left:0;
   width: auto;
   height: auto;
   overflow: auto;
   background-color: rgb(0,0,0);
   background-color: rgba(0,0,0,0.4);
   z-index: 1000;
+  justify-content: center;
 }
 
 .modal-content {
@@ -699,6 +700,8 @@ transform-style: preserve-3d;
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
+  justify-content: center;
+  align-items: center;
   width:360px !important;
 }
 
