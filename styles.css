@@ -615,7 +615,7 @@ transform-style: preserve-3d;
   justify-content:center;
   width: 350px;
 }
-/* Card Container */
+
 #data-container {
     display: flex;
     flex-wrap: wrap;
@@ -682,28 +682,33 @@ transform-style: preserve-3d;
 
 
 /*Css forVideo Modeal */
-.modal{
+.modal {
   position: fixed;
   top: 0;
-  left:0;
-  width: auto;
-  height: auto;
-  overflow: auto;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0,0.4);
+  left: 0;
+  width: 100%; /* Take full width */
+  height: 100%; /* Take full height */
+  overflow: auto; /* Allow scrolling if needed */
+  background-color: rgba(0, 0, 0, 0.4); /* Background overlay */
   z-index: 1000;
-  justify-content: center;
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
 }
 
 .modal-content {
-  background-color: #ffffff00 !important;
-  margin: 15% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  justify-content: center;
-  align-items: center;
-  width:360px !important;
+  background-color: #ffffff00 !important; /* Solid background for content */
+  padding: 20px; /* Padding around the content */
+  border: 1px solid #888; /* Border around the modal content */
+  width: 360px; /* Fixed width */
+  max-width: 100%; /* Responsive max width for mobile */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for better visibility */
+  display: flex; /* Use flexbox for centering inner content */
+  flex-direction: column; /* Arrange inner content in a column */
+  justify-content: center; /* Center content vertically within the modal */
+  align-items: center; /* Center content horizontally within the modal */
 }
+
 
 .close {
   color: #f5e4e4;
@@ -719,15 +724,13 @@ transform-style: preserve-3d;
   cursor: pointer;
 }
 
-.subdes{
-    color: rgb(34, 33, 33);
-    font-size: 11px;
-    text-justify:center;
-    text-align: center;
-  
+.subdes {
+  color: rgb(34, 33, 33);
+  font-size: 11px;
+  text-align: center; /* Center text */
 }
 
-.sub-category{
+.sub-category {
   display: flex;
   flex-wrap: wrap;
   gap: 20px; /* Adjust as needed for spacing */
